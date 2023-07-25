@@ -42,21 +42,23 @@
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($data as $row): ?>
-            <tr>
-            <td><?= $row[0]["id"] ?></td>
-            <td><?= $row[0]["timestamp"] ?></td>
-            <td><?= $row[0]["nama"] ?></td>
-            <td><?= $row[0]["nip"] ?></td>
-            <td><?= $row[0]["satuan_kerja"] ?></td>
-            <td><?= $row[0]["posisi_yang_dipilih"] ?></td>
-            <td><?= $row[0]["bahasa_pemrograman_yang_dikuasai"] ?></td>
-            <td><?= $row[0]["framework_bahasa_pemrograman_yang_dikuasai"] ?></td>
-            <td><?= $row[0]["database_yang_dikuasai"] ?></td>
-            <td><?= $row[0]["tools_yang_dikuasai"] ?></td>
-            <td><?= $row[0]["pernah_membuat_mobile_apps"] ?></td>
-            </tr>
-        <?php endforeach; ?>
+        <?php
+            foreach ($data["Form Responses 1"] as $row) {
+                echo "<tr>";
+                echo "<td>{$row['id']}</td>";
+                echo "<td>{$row['timestamp']}</td>";
+                echo "<td>{$row['nama']}</td>";
+                echo "<td>{$row['nip']}</td>";
+                echo "<td>{$row['satuan_kerja']}</td>";
+                echo "<td>{$row['posisi_yang_dipilih']}</td>";
+                echo "<td>{$row['bahasa_pemrograman_yang_dikuasai']}</td>";
+                echo "<td>{$row['framework_bahasa_pemrograman_yang_dikuasai']}</td>";
+                echo "<td>{$row['database_yang_dikuasai']}</td>";
+                echo "<td>{$row['tools_yang_dikuasai']}</td>";
+                echo "<td>{$row['pernah_membuat_mobile_apps']}</td>";
+                echo "</tr>";
+            }
+        ?>
         
     </tbody>
 </table>
